@@ -1,0 +1,2722 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+    >tinycolor2 (v1.4.1)</a>
+</h1>
+<h4>Fast Color Parsing and Manipulation</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.tinycolor2">module tinycolor2</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor2">
+            function <span class="apidocSignatureSpan"></span>tinycolor2
+            <span class="apidocSignatureSpan">(color, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.equals">
+            function <span class="apidocSignatureSpan">tinycolor2.</span>equals
+            <span class="apidocSignatureSpan">(color1, color2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.fromRatio">
+            function <span class="apidocSignatureSpan">tinycolor2.</span>fromRatio
+            <span class="apidocSignatureSpan">(color, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.isReadable">
+            function <span class="apidocSignatureSpan">tinycolor2.</span>isReadable
+            <span class="apidocSignatureSpan">(color1, color2, wcag2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.mix">
+            function <span class="apidocSignatureSpan">tinycolor2.</span>mix
+            <span class="apidocSignatureSpan">(color1, color2, amount)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.mostReadable">
+            function <span class="apidocSignatureSpan">tinycolor2.</span>mostReadable
+            <span class="apidocSignatureSpan">(baseColor, colorList, args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.random">
+            function <span class="apidocSignatureSpan">tinycolor2.</span>random
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.readability">
+            function <span class="apidocSignatureSpan">tinycolor2.</span>readability
+            <span class="apidocSignatureSpan">(color1, color2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor">
+            function <span class="apidocSignatureSpan">tinycolor2.</span>tinycolor
+            <span class="apidocSignatureSpan">(color, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">tinycolor2.</span>hexNames</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">tinycolor2.</span>names</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">tinycolor2.</span>tinycolor.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.tinycolor2.tinycolor">module tinycolor2.tinycolor</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.tinycolor">
+            function <span class="apidocSignatureSpan">tinycolor2.</span>tinycolor
+            <span class="apidocSignatureSpan">(color, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.equals">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.</span>equals
+            <span class="apidocSignatureSpan">(color1, color2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.fromRatio">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.</span>fromRatio
+            <span class="apidocSignatureSpan">(color, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.isReadable">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.</span>isReadable
+            <span class="apidocSignatureSpan">(color1, color2, wcag2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.mix">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.</span>mix
+            <span class="apidocSignatureSpan">(color1, color2, amount)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.mostReadable">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.</span>mostReadable
+            <span class="apidocSignatureSpan">(baseColor, colorList, args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.random">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.</span>random
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.readability">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.</span>readability
+            <span class="apidocSignatureSpan">(color1, color2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">tinycolor2.tinycolor.</span>hexNames</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">tinycolor2.tinycolor.</span>names</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.tinycolor2.tinycolor.prototype">module tinycolor2.tinycolor.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype._applyCombination">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>_applyCombination
+            <span class="apidocSignatureSpan">(fn, args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype._applyModification">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>_applyModification
+            <span class="apidocSignatureSpan">(fn, args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.analogous">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>analogous
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.brighten">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>brighten
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.clone">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>clone
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.complement">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>complement
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.darken">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>darken
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.desaturate">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>desaturate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.getAlpha">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>getAlpha
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.getBrightness">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>getBrightness
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.getFormat">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>getFormat
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.getLuminance">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>getLuminance
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.getOriginalInput">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>getOriginalInput
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.greyscale">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>greyscale
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.isDark">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>isDark
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.isLight">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>isLight
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.isValid">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>isValid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.lighten">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>lighten
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.monochromatic">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>monochromatic
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.saturate">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>saturate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.setAlpha">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>setAlpha
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.spin">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>spin
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.splitcomplement">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>splitcomplement
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.tetrad">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>tetrad
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.toFilter">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>toFilter
+            <span class="apidocSignatureSpan">(secondColor)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.toHex">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>toHex
+            <span class="apidocSignatureSpan">(allow3Char)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.toHex8">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>toHex8
+            <span class="apidocSignatureSpan">(allow4Char)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.toHex8String">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>toHex8String
+            <span class="apidocSignatureSpan">(allow4Char)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.toHexString">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>toHexString
+            <span class="apidocSignatureSpan">(allow3Char)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.toHsl">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>toHsl
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.toHslString">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>toHslString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.toHsv">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>toHsv
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.toHsvString">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>toHsvString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.toName">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>toName
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.toPercentageRgb">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>toPercentageRgb
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.toPercentageRgbString">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>toPercentageRgbString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.toRgb">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>toRgb
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.toRgbString">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>toRgbString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.toString">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>toString
+            <span class="apidocSignatureSpan">(format)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.tinycolor2.tinycolor.prototype.triad">
+            function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>triad
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.tinycolor2" id="apidoc.module.tinycolor2">module tinycolor2</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor2" id="apidoc.element.tinycolor2.tinycolor2">
+        function <span class="apidocSignatureSpan"></span>tinycolor2
+        <span class="apidocSignatureSpan">(color, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function tinycolor(color, opts) {
+
+    color = (color) ? color : &#x27;&#x27;;
+    opts = opts || { };
+
+    // If input is already a tinycolor, return itself
+    if (color instanceof tinycolor) {
+       return color;
+    }
+    // If we are called as a function, call using new instead
+    if (!(this instanceof tinycolor)) {
+        return new tinycolor(color, opts);
+    }
+
+    var rgb = inputToRGB(color);
+    this._originalInput = color,
+    this._r = rgb.r,
+    this._g = rgb.g,
+    this._b = rgb.b,
+    this._a = rgb.a,
+    this._roundA = mathRound(100*this._a) / 100,
+    this._format = opts.format || rgb.format;
+    this._gradientType = opts.gradientType;
+
+    // Don&#x27;t let the range of [0,255] come back in [0,1].
+    // Potentially lose a little bit of precision here, but will fix issues where
+    // .5 gets interpreted as half of the total, instead of half of 1
+    // If it was supposed to be 128, this was already taken care of by `inputToRgb`
+    if (this._r &#x3c; 1) { this._r = mathRound(this._r); }
+    if (this._g &#x3c; 1) { this._g = mathRound(this._g); }
+    if (this._b &#x3c; 1) { this._b = mathRound(this._b); }
+
+    this._ok = rgb.ok;
+    this._tc_id = tinyCounter++;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.equals" id="apidoc.element.tinycolor2.equals">
+        function <span class="apidocSignatureSpan">tinycolor2.</span>equals
+        <span class="apidocSignatureSpan">(color1, color2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">equals = function (color1, color2) {
+    if (!color1 || !color2) { return false; }
+    return tinycolor(color1).toRgbString() == tinycolor(color2).toRgbString();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+`complement: function() -&#x3e; TinyColor`.
+```js
+tinycolor(&#x22;#f00&#x22;).complement().toHexString(); // &#x22;#00ffff&#x22;
+```
+## Color Utilities
+```js
+tinycolor.<span class="apidocCodeKeywordSpan">equals</span>(color1, color2)
+tinycolor.mix(color1, color2, amount = 50)
+```
+### random
+
+Returns a random color.
+```js
+var color = tinycolor.random();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.fromRatio" id="apidoc.element.tinycolor2.fromRatio">
+        function <span class="apidocSignatureSpan">tinycolor2.</span>fromRatio
+        <span class="apidocSignatureSpan">(color, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromRatio = function (color, opts) {
+    if (typeof color == &#x22;object&#x22;) {
+        var newColor = {};
+        for (var i in color) {
+            if (color.hasOwnProperty(i)) {
+                if (i === &#x22;a&#x22;) {
+                    newColor[i] = color[i];
+                }
+                else {
+                    newColor[i] = convertToPercentage(color[i]);
+                }
+            }
+        }
+        color = newColor;
+    }
+
+    return tinycolor(color, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+### RGB, RGBA
+```js
+tinycolor(&#x22;rgb (255, 0, 0)&#x22;);
+tinycolor(&#x22;rgb 255 0 0&#x22;);
+tinycolor(&#x22;rgba (255, 0, 0, .5)&#x22;);
+tinycolor({ r: 255, g: 0, b: 0 });
+tinycolor.<span class="apidocCodeKeywordSpan">fromRatio</span>({ r: 1, g: 0, b: 0 });
+tinycolor.fromRatio({ r: .5, g: .5, b: .5 });
+```
+### HSL, HSLA
+```js
+tinycolor(&#x22;hsl(0, 100%, 50%)&#x22;);
+tinycolor(&#x22;hsla(0, 100%, 50%, .5)&#x22;);
+tinycolor(&#x22;hsl(0, 100%, 50%)&#x22;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.isReadable" id="apidoc.element.tinycolor2.isReadable">
+        function <span class="apidocSignatureSpan">tinycolor2.</span>isReadable
+        <span class="apidocSignatureSpan">(color1, color2, wcag2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isReadable = function (color1, color2, wcag2) {
+    var readability = tinycolor.readability(color1, color2);
+    var wcag2Parms, out;
+
+    out = false;
+
+    wcag2Parms = validateWCAG2Parms(wcag2);
+    switch (wcag2Parms.level + wcag2Parms.size) {
+        case &#x22;AAsmall&#x22;:
+        case &#x22;AAAlarge&#x22;:
+            out = readability &#x3e;= 4.5;
+            break;
+        case &#x22;AAlarge&#x22;:
+            out = readability &#x3e;= 3;
+            break;
+        case &#x22;AAAsmall&#x22;:
+            out = readability &#x3e;= 7;
+            break;
+    }
+    return out;
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+#### isReadable
+
+`isReadable: function(TinyColor, TinyColor, Object) -&#x3e; Boolean`.  Ensure that foreground and background color combinations
+meet WCAG guidelines. `Object` is optional, defaulting to `{level: &#x22;AA&#x22;,size: &#x22;small&#x22;}`.  `level` can be `&#
+x22;AA&#x22;` or &#x22;AAA&#x22; and `size` can be `&#x22;small&#x22;` or `&#x22;large&#x22;`.
+
+Here are links to read more about the [AA](http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html) and [AAA
+](http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast7.html) requirements.
+```js
+tinycolor.<span class="apidocCodeKeywordSpan">isReadable</span>(&#x22;#000&#x22;, &#x22;#111&#x22;, {}); // false
+tinycolor.isReadable(&#x22;#ff0088&#x22;, &#x22;#5c1a72&#x22;,{level:&#x22;AA&#x22;,size:&#x22;small&#x22;}); //false
+tinycolor.isReadable(&#x22;#ff0088&#x22;, &#x22;#5c1a72&#x22;,{level:&#x22;AA&#x22;,size:&#x22;large&#x22;}), //true
+```
+#### mostReadable
+
+`mostReadable: function(TinyColor, [TinyColor, Tinycolor ...], Object) -&#x3e; Boolean`.
+Given a base color and a list of possible foreground or background colors for that base, returns the most readable color.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.mix" id="apidoc.element.tinycolor2.mix">
+        function <span class="apidocSignatureSpan">tinycolor2.</span>mix
+        <span class="apidocSignatureSpan">(color1, color2, amount)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mix = function (color1, color2, amount) {
+    amount = (amount === 0) ? 0 : (amount || 50);
+
+    var rgb1 = tinycolor(color1).toRgb();
+    var rgb2 = tinycolor(color2).toRgb();
+
+    var p = amount / 100;
+
+    var rgba = {
+        r: ((rgb2.r - rgb1.r) * p) + rgb1.r,
+        g: ((rgb2.g - rgb1.g) * p) + rgb1.g,
+        b: ((rgb2.b - rgb1.b) * p) + rgb1.b,
+        a: ((rgb2.a - rgb1.a) * p) + rgb1.a
+    };
+
+    return tinycolor(rgba);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+`complement: function() -&#x3e; TinyColor`.
+```js
+tinycolor(&#x22;#f00&#x22;).complement().toHexString(); // &#x22;#00ffff&#x22;
+```
+## Color Utilities
+```js
+tinycolor.equals(color1, color2)
+tinycolor.<span class="apidocCodeKeywordSpan">mix</span>(color1, color2, amount = 50)
+```
+### random
+
+Returns a random color.
+```js
+var color = tinycolor.random();
+color.toRgb(); // &#x22;{r: 145, g: 40, b: 198, a: 1}&#x22;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.mostReadable" id="apidoc.element.tinycolor2.mostReadable">
+        function <span class="apidocSignatureSpan">tinycolor2.</span>mostReadable
+        <span class="apidocSignatureSpan">(baseColor, colorList, args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mostReadable = function (baseColor, colorList, args) {
+    var bestColor = null;
+    var bestScore = 0;
+    var readability;
+    var includeFallbackColors, level, size ;
+    args = args || {};
+    includeFallbackColors = args.includeFallbackColors ;
+    level = args.level;
+    size = args.size;
+
+    for (var i= 0; i &#x3c; colorList.length ; i++) {
+        readability = tinycolor.readability(baseColor, colorList[i]);
+        if (readability &#x3e; bestScore) {
+            bestScore = readability;
+            bestColor = tinycolor(colorList[i]);
+        }
+    }
+
+    if (tinycolor.isReadable(baseColor, bestColor, {&#x22;level&#x22;:level,&#x22;size&#x22;:size}) || !includeFallbackColors) {
+        return bestColor;
+    }
+    else {
+        args.includeFallbackColors=false;
+        return tinycolor.mostReadable(baseColor,[&#x22;#fff&#x22;, &#x22;#000&#x22;],args);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+#### mostReadable
+
+`mostReadable: function(TinyColor, [TinyColor, Tinycolor ...], Object) -&#x3e; Boolean`.
+Given a base color and a list of possible foreground or background colors for that base, returns the most readable color.
+If none of the colors in the list is readable, `mostReadable` will return the better of black or white if `includeFallbackColors
+:true`.
+```js
+tinycolor.<span class="apidocCodeKeywordSpan">mostReadable</span>(&#x22;#000&#x22;, [&#x22;#f00&#x22;, &#x22;#0f0&#x22;, &#x22;#
+00f&#x22;]).toHexString(); // &#x22;#00ff00&#x22;
+tinycolor.mostReadable(tinycolor.mostReadable(&#x22;#123&#x22;, [&#x22;#124&#x22;, &#x22;#125&#x22;],{includeFallbackColors:false
+}).toHexString(); // &#x22;#112255&#x22;
+tinycolor.mostReadable(tinycolor.mostReadable(&#x22;#123&#x22;, [&#x22;#124&#x22;, &#x22;#125&#x22;],{includeFallbackColors:true
+}).toHexString();  // &#x22;#ffffff&#x22;
+tinycolor.mostReadable(&#x22;#ff0088&#x22;, [&#x22;#2e0c3a&#x22;],{includeFallbackColors:true,level:&#x22;AAA&#x22;,size:&#x22;large
+&#x22;}).toHexString()   // &#x22;#2e0c3a&#x22;,
+tinycolor.mostReadable(&#x22;#ff0088&#x22;, [&#x22;#2e0c3a&#x22;],{includeFallbackColors:true,level:&#x22;AAA&#x22;,size:&#x22;small
+&#x22;}).toHexString()   // &#x22;#000000&#x22;,
+```
+See [index.html](https://github.com/bgrins/TinyColor/blob/master/index.html) in the project for a demo.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.random" id="apidoc.element.tinycolor2.random">
+        function <span class="apidocSignatureSpan">tinycolor2.</span>random
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">random = function () {
+    return tinycolor.fromRatio({
+        r: mathRandom(),
+        g: mathRandom(),
+        b: mathRandom()
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+tinycolor.equals(color1, color2)
+tinycolor.mix(color1, color2, amount = 50)
+```
+### random
+
+Returns a random color.
+```js
+var color = tinycolor.<span class="apidocCodeKeywordSpan">random</span>();
+color.toRgb(); // &#x22;{r: 145, g: 40, b: 198, a: 1}&#x22;
+```
+
+### Readability
+
+TinyColor assesses readability based on the [Web Content Accessibility Guidelines (Version 2.0)](http://www.w3.org/TR/2008/REC-WCAG20
+-20081211/#contrast-ratiodef).
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.readability" id="apidoc.element.tinycolor2.readability">
+        function <span class="apidocSignatureSpan">tinycolor2.</span>readability
+        <span class="apidocSignatureSpan">(color1, color2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readability = function (color1, color2) {
+    var c1 = tinycolor(color1);
+    var c2 = tinycolor(color2);
+    return (Math.max(c1.getLuminance(),c2.getLuminance())+0.05) / (Math.min(c1.getLuminance(),c2.getLuminance())+0.05);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+TinyColor assesses readability based on the [Web Content Accessibility Guidelines (Version 2.0)](http://www.w3.org/TR/2008/REC-WCAG20
+-20081211/#contrast-ratiodef).
+
+#### readability
+
+`readability: function(TinyColor, TinyColor) -&#x3e; Object`.
+Returns the contrast ratio between two colors.
+```js
+tinycolor.<span class="apidocCodeKeywordSpan">readability</span>(&#x22;#000&#x22;, &#x22;#000&#x22;); // 1
+tinycolor.readability(&#x22;#000&#x22;, &#x22;#111&#x22;); // 1.1121078324840545
+tinycolor.readability(&#x22;#000&#x22;, &#x22;#fff&#x22;); // 21
+```
+Use the values in your own calculations, or use one of the convenience functions below.
+
+#### isReadable
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor" id="apidoc.element.tinycolor2.tinycolor">
+        function <span class="apidocSignatureSpan">tinycolor2.</span>tinycolor
+        <span class="apidocSignatureSpan">(color, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function tinycolor(color, opts) {
+
+    color = (color) ? color : &#x27;&#x27;;
+    opts = opts || { };
+
+    // If input is already a tinycolor, return itself
+    if (color instanceof tinycolor) {
+       return color;
+    }
+    // If we are called as a function, call using new instead
+    if (!(this instanceof tinycolor)) {
+        return new tinycolor(color, opts);
+    }
+
+    var rgb = inputToRGB(color);
+    this._originalInput = color,
+    this._r = rgb.r,
+    this._g = rgb.g,
+    this._b = rgb.b,
+    this._a = rgb.a,
+    this._roundA = mathRound(100*this._a) / 100,
+    this._format = opts.format || rgb.format;
+    this._gradientType = opts.gradientType;
+
+    // Don&#x27;t let the range of [0,255] come back in [0,1].
+    // Potentially lose a little bit of precision here, but will fix issues where
+    // .5 gets interpreted as half of the total, instead of half of 1
+    // If it was supposed to be 128, this was already taken care of by `inputToRgb`
+    if (this._r &#x3c; 1) { this._r = mathRound(this._r); }
+    if (this._g &#x3c; 1) { this._g = mathRound(this._g); }
+    if (this._b &#x3c; 1) { this._b = mathRound(this._b); }
+
+    this._ok = rgb.ok;
+    this._tc_id = tinyCounter++;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.tinycolor2.tinycolor" id="apidoc.module.tinycolor2.tinycolor">module tinycolor2.tinycolor</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.tinycolor" id="apidoc.element.tinycolor2.tinycolor.tinycolor">
+        function <span class="apidocSignatureSpan">tinycolor2.</span>tinycolor
+        <span class="apidocSignatureSpan">(color, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function tinycolor(color, opts) {
+
+    color = (color) ? color : &#x27;&#x27;;
+    opts = opts || { };
+
+    // If input is already a tinycolor, return itself
+    if (color instanceof tinycolor) {
+       return color;
+    }
+    // If we are called as a function, call using new instead
+    if (!(this instanceof tinycolor)) {
+        return new tinycolor(color, opts);
+    }
+
+    var rgb = inputToRGB(color);
+    this._originalInput = color,
+    this._r = rgb.r,
+    this._g = rgb.g,
+    this._b = rgb.b,
+    this._a = rgb.a,
+    this._roundA = mathRound(100*this._a) / 100,
+    this._format = opts.format || rgb.format;
+    this._gradientType = opts.gradientType;
+
+    // Don&#x27;t let the range of [0,255] come back in [0,1].
+    // Potentially lose a little bit of precision here, but will fix issues where
+    // .5 gets interpreted as half of the total, instead of half of 1
+    // If it was supposed to be 128, this was already taken care of by `inputToRgb`
+    if (this._r &#x3c; 1) { this._r = mathRound(this._r); }
+    if (this._g &#x3c; 1) { this._g = mathRound(this._g); }
+    if (this._b &#x3c; 1) { this._b = mathRound(this._b); }
+
+    this._ok = rgb.ok;
+    this._tc_id = tinyCounter++;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.equals" id="apidoc.element.tinycolor2.tinycolor.equals">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.</span>equals
+        <span class="apidocSignatureSpan">(color1, color2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">equals = function (color1, color2) {
+    if (!color1 || !color2) { return false; }
+    return tinycolor(color1).toRgbString() == tinycolor(color2).toRgbString();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+`complement: function() -&#x3e; TinyColor`.
+```js
+tinycolor(&#x22;#f00&#x22;).complement().toHexString(); // &#x22;#00ffff&#x22;
+```
+## Color Utilities
+```js
+tinycolor.<span class="apidocCodeKeywordSpan">equals</span>(color1, color2)
+tinycolor.mix(color1, color2, amount = 50)
+```
+### random
+
+Returns a random color.
+```js
+var color = tinycolor.random();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.fromRatio" id="apidoc.element.tinycolor2.tinycolor.fromRatio">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.</span>fromRatio
+        <span class="apidocSignatureSpan">(color, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromRatio = function (color, opts) {
+    if (typeof color == &#x22;object&#x22;) {
+        var newColor = {};
+        for (var i in color) {
+            if (color.hasOwnProperty(i)) {
+                if (i === &#x22;a&#x22;) {
+                    newColor[i] = color[i];
+                }
+                else {
+                    newColor[i] = convertToPercentage(color[i]);
+                }
+            }
+        }
+        color = newColor;
+    }
+
+    return tinycolor(color, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+### RGB, RGBA
+```js
+tinycolor(&#x22;rgb (255, 0, 0)&#x22;);
+tinycolor(&#x22;rgb 255 0 0&#x22;);
+tinycolor(&#x22;rgba (255, 0, 0, .5)&#x22;);
+tinycolor({ r: 255, g: 0, b: 0 });
+tinycolor.<span class="apidocCodeKeywordSpan">fromRatio</span>({ r: 1, g: 0, b: 0 });
+tinycolor.fromRatio({ r: .5, g: .5, b: .5 });
+```
+### HSL, HSLA
+```js
+tinycolor(&#x22;hsl(0, 100%, 50%)&#x22;);
+tinycolor(&#x22;hsla(0, 100%, 50%, .5)&#x22;);
+tinycolor(&#x22;hsl(0, 100%, 50%)&#x22;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.isReadable" id="apidoc.element.tinycolor2.tinycolor.isReadable">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.</span>isReadable
+        <span class="apidocSignatureSpan">(color1, color2, wcag2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isReadable = function (color1, color2, wcag2) {
+    var readability = tinycolor.readability(color1, color2);
+    var wcag2Parms, out;
+
+    out = false;
+
+    wcag2Parms = validateWCAG2Parms(wcag2);
+    switch (wcag2Parms.level + wcag2Parms.size) {
+        case &#x22;AAsmall&#x22;:
+        case &#x22;AAAlarge&#x22;:
+            out = readability &#x3e;= 4.5;
+            break;
+        case &#x22;AAlarge&#x22;:
+            out = readability &#x3e;= 3;
+            break;
+        case &#x22;AAAsmall&#x22;:
+            out = readability &#x3e;= 7;
+            break;
+    }
+    return out;
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+#### isReadable
+
+`isReadable: function(TinyColor, TinyColor, Object) -&#x3e; Boolean`.  Ensure that foreground and background color combinations
+meet WCAG guidelines. `Object` is optional, defaulting to `{level: &#x22;AA&#x22;,size: &#x22;small&#x22;}`.  `level` can be `&#
+x22;AA&#x22;` or &#x22;AAA&#x22; and `size` can be `&#x22;small&#x22;` or `&#x22;large&#x22;`.
+
+Here are links to read more about the [AA](http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html) and [AAA
+](http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast7.html) requirements.
+```js
+tinycolor.<span class="apidocCodeKeywordSpan">isReadable</span>(&#x22;#000&#x22;, &#x22;#111&#x22;, {}); // false
+tinycolor.isReadable(&#x22;#ff0088&#x22;, &#x22;#5c1a72&#x22;,{level:&#x22;AA&#x22;,size:&#x22;small&#x22;}); //false
+tinycolor.isReadable(&#x22;#ff0088&#x22;, &#x22;#5c1a72&#x22;,{level:&#x22;AA&#x22;,size:&#x22;large&#x22;}), //true
+```
+#### mostReadable
+
+`mostReadable: function(TinyColor, [TinyColor, Tinycolor ...], Object) -&#x3e; Boolean`.
+Given a base color and a list of possible foreground or background colors for that base, returns the most readable color.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.mix" id="apidoc.element.tinycolor2.tinycolor.mix">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.</span>mix
+        <span class="apidocSignatureSpan">(color1, color2, amount)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mix = function (color1, color2, amount) {
+    amount = (amount === 0) ? 0 : (amount || 50);
+
+    var rgb1 = tinycolor(color1).toRgb();
+    var rgb2 = tinycolor(color2).toRgb();
+
+    var p = amount / 100;
+
+    var rgba = {
+        r: ((rgb2.r - rgb1.r) * p) + rgb1.r,
+        g: ((rgb2.g - rgb1.g) * p) + rgb1.g,
+        b: ((rgb2.b - rgb1.b) * p) + rgb1.b,
+        a: ((rgb2.a - rgb1.a) * p) + rgb1.a
+    };
+
+    return tinycolor(rgba);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+`complement: function() -&#x3e; TinyColor`.
+```js
+tinycolor(&#x22;#f00&#x22;).complement().toHexString(); // &#x22;#00ffff&#x22;
+```
+## Color Utilities
+```js
+tinycolor.equals(color1, color2)
+tinycolor.<span class="apidocCodeKeywordSpan">mix</span>(color1, color2, amount = 50)
+```
+### random
+
+Returns a random color.
+```js
+var color = tinycolor.random();
+color.toRgb(); // &#x22;{r: 145, g: 40, b: 198, a: 1}&#x22;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.mostReadable" id="apidoc.element.tinycolor2.tinycolor.mostReadable">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.</span>mostReadable
+        <span class="apidocSignatureSpan">(baseColor, colorList, args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mostReadable = function (baseColor, colorList, args) {
+    var bestColor = null;
+    var bestScore = 0;
+    var readability;
+    var includeFallbackColors, level, size ;
+    args = args || {};
+    includeFallbackColors = args.includeFallbackColors ;
+    level = args.level;
+    size = args.size;
+
+    for (var i= 0; i &#x3c; colorList.length ; i++) {
+        readability = tinycolor.readability(baseColor, colorList[i]);
+        if (readability &#x3e; bestScore) {
+            bestScore = readability;
+            bestColor = tinycolor(colorList[i]);
+        }
+    }
+
+    if (tinycolor.isReadable(baseColor, bestColor, {&#x22;level&#x22;:level,&#x22;size&#x22;:size}) || !includeFallbackColors) {
+        return bestColor;
+    }
+    else {
+        args.includeFallbackColors=false;
+        return tinycolor.mostReadable(baseColor,[&#x22;#fff&#x22;, &#x22;#000&#x22;],args);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+#### mostReadable
+
+`mostReadable: function(TinyColor, [TinyColor, Tinycolor ...], Object) -&#x3e; Boolean`.
+Given a base color and a list of possible foreground or background colors for that base, returns the most readable color.
+If none of the colors in the list is readable, `mostReadable` will return the better of black or white if `includeFallbackColors
+:true`.
+```js
+tinycolor.<span class="apidocCodeKeywordSpan">mostReadable</span>(&#x22;#000&#x22;, [&#x22;#f00&#x22;, &#x22;#0f0&#x22;, &#x22;#
+00f&#x22;]).toHexString(); // &#x22;#00ff00&#x22;
+tinycolor.mostReadable(tinycolor.mostReadable(&#x22;#123&#x22;, [&#x22;#124&#x22;, &#x22;#125&#x22;],{includeFallbackColors:false
+}).toHexString(); // &#x22;#112255&#x22;
+tinycolor.mostReadable(tinycolor.mostReadable(&#x22;#123&#x22;, [&#x22;#124&#x22;, &#x22;#125&#x22;],{includeFallbackColors:true
+}).toHexString();  // &#x22;#ffffff&#x22;
+tinycolor.mostReadable(&#x22;#ff0088&#x22;, [&#x22;#2e0c3a&#x22;],{includeFallbackColors:true,level:&#x22;AAA&#x22;,size:&#x22;large
+&#x22;}).toHexString()   // &#x22;#2e0c3a&#x22;,
+tinycolor.mostReadable(&#x22;#ff0088&#x22;, [&#x22;#2e0c3a&#x22;],{includeFallbackColors:true,level:&#x22;AAA&#x22;,size:&#x22;small
+&#x22;}).toHexString()   // &#x22;#000000&#x22;,
+```
+See [index.html](https://github.com/bgrins/TinyColor/blob/master/index.html) in the project for a demo.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.random" id="apidoc.element.tinycolor2.tinycolor.random">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.</span>random
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">random = function () {
+    return tinycolor.fromRatio({
+        r: mathRandom(),
+        g: mathRandom(),
+        b: mathRandom()
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+tinycolor.equals(color1, color2)
+tinycolor.mix(color1, color2, amount = 50)
+```
+### random
+
+Returns a random color.
+```js
+var color = tinycolor.<span class="apidocCodeKeywordSpan">random</span>();
+color.toRgb(); // &#x22;{r: 145, g: 40, b: 198, a: 1}&#x22;
+```
+
+### Readability
+
+TinyColor assesses readability based on the [Web Content Accessibility Guidelines (Version 2.0)](http://www.w3.org/TR/2008/REC-WCAG20
+-20081211/#contrast-ratiodef).
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.readability" id="apidoc.element.tinycolor2.tinycolor.readability">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.</span>readability
+        <span class="apidocSignatureSpan">(color1, color2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readability = function (color1, color2) {
+    var c1 = tinycolor(color1);
+    var c2 = tinycolor(color2);
+    return (Math.max(c1.getLuminance(),c2.getLuminance())+0.05) / (Math.min(c1.getLuminance(),c2.getLuminance())+0.05);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+TinyColor assesses readability based on the [Web Content Accessibility Guidelines (Version 2.0)](http://www.w3.org/TR/2008/REC-WCAG20
+-20081211/#contrast-ratiodef).
+
+#### readability
+
+`readability: function(TinyColor, TinyColor) -&#x3e; Object`.
+Returns the contrast ratio between two colors.
+```js
+tinycolor.<span class="apidocCodeKeywordSpan">readability</span>(&#x22;#000&#x22;, &#x22;#000&#x22;); // 1
+tinycolor.readability(&#x22;#000&#x22;, &#x22;#111&#x22;); // 1.1121078324840545
+tinycolor.readability(&#x22;#000&#x22;, &#x22;#fff&#x22;); // 21
+```
+Use the values in your own calculations, or use one of the convenience functions below.
+
+#### isReadable
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.tinycolor2.tinycolor.prototype" id="apidoc.module.tinycolor2.tinycolor.prototype">module tinycolor2.tinycolor.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype._applyCombination" id="apidoc.element.tinycolor2.tinycolor.prototype._applyCombination">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>_applyCombination
+        <span class="apidocSignatureSpan">(fn, args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_applyCombination = function (fn, args) {
+    return fn.apply(null, [this].concat([].slice.call(args)));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype._applyModification" id="apidoc.element.tinycolor2.tinycolor.prototype._applyModification">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>_applyModification
+        <span class="apidocSignatureSpan">(fn, args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_applyModification = function (fn, args) {
+    var color = fn.apply(null, [this].concat([].slice.call(args)));
+    this._r = color._r;
+    this._g = color._g;
+    this._b = color._b;
+    this.setAlpha(color._a);
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.analogous" id="apidoc.element.tinycolor2.tinycolor.prototype.analogous">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>analogous
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">analogous = function () {
+    return this._applyCombination(analogous, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Combination functions return an array of TinyColor objects unless otherwise noted.
+
+### analogous
+
+`analogous: function(, results = 6, slices = 30) -&#x3e; array&#x3c;TinyColor&#x3e;`.
+```js
+var colors = tinycolor(&#x22;#f00&#x22;).<span class="apidocCodeKeywordSpan">analogous</span>();
+
+colors.map(function(t) { return t.toHexString(); }); // [ &#x22;#ff0000&#x22;, &#x22;#ff0066&#x22;, &#x22;#ff0033&#x22;, &#x22;#
+ff0000&#x22;, &#x22;#ff3300&#x22;, &#x22;#ff6600&#x22; ]
+```
+### monochromatic
+
+`monochromatic: function(, results = 6) -&#x3e; array&#x3c;TinyColor&#x3e;`.
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.brighten" id="apidoc.element.tinycolor2.tinycolor.prototype.brighten">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>brighten
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">brighten = function () {
+    return this._applyModification(brighten, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+tinycolor(&#x22;#f00&#x22;).lighten().toString(); // &#x22;#ff3333&#x22;
+tinycolor(&#x22;#f00&#x22;).lighten(100).toString(); // &#x22;#ffffff&#x22;
+```
+### brighten
+
+`brighten: function(amount = 10) -&#x3e; TinyColor`.  Brighten the color a given amount, from 0 to 100.
+```js
+tinycolor(&#x22;#f00&#x22;).<span class="apidocCodeKeywordSpan">brighten</span>().toString(); // &#x22;#ff1919&#x22;
+```
+### darken
+
+`darken: function(amount = 10) -&#x3e; TinyColor`.  Darken the color a given amount, from 0 to 100.  Providing 100 will always return
+ black.
+```js
+tinycolor(&#x22;#f00&#x22;).darken().toString(); // &#x22;#cc0000&#x22;
+tinycolor(&#x22;#f00&#x22;).darken(100).toString(); // &#x22;#000000&#x22;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.clone" id="apidoc.element.tinycolor2.tinycolor.prototype.clone">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>clone
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clone = function () {
+    return tinycolor(this.toString());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### clone
+
+`clone: function() -&#x3e; TinyColor`.
+Instantiate a new TinyColor object with the same color.  Any changes to the new one won&#x27;t affect the old one.
+```js
+var color1 = tinycolor(&#x22;#F00&#x22;);
+var color2 = color1.<span class="apidocCodeKeywordSpan">clone</span>();
+color2.setAlpha(.5);
+
+color1.toString(); // &#x22;#ff0000&#x22;
+color2.toString(); // &#x22;rgba(255, 0, 0, 0.5)&#x22;
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.complement" id="apidoc.element.tinycolor2.tinycolor.prototype.complement">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>complement
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">complement = function () {
+    return this._applyCombination(complement, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+colors.map(function(t) { return t.toHexString(); }); // [ &#x22;#ff0000&#x22;, &#x22;#80ff00&#x22;, &#x22;#00ffff&#x22;, &#x22;#
+7f00ff&#x22; ]
+
+```
+### complement
+
+`complement: function() -&#x3e; TinyColor`.
+```js
+tinycolor(&#x22;#f00&#x22;).<span class="apidocCodeKeywordSpan">complement</span>().toHexString(); // &#x22;#00ffff&#x22;
+```
+## Color Utilities
+```js
+tinycolor.equals(color1, color2)
+tinycolor.mix(color1, color2, amount = 50)
+```
+### random
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.darken" id="apidoc.element.tinycolor2.tinycolor.prototype.darken">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>darken
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">darken = function () {
+    return this._applyModification(darken, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+tinycolor(&#x22;#f00&#x22;).brighten().toString(); // &#x22;#ff1919&#x22;
+```
+### darken
+
+`darken: function(amount = 10) -&#x3e; TinyColor`.  Darken the color a given amount, from 0 to 100.  Providing 100 will always return
+ black.
+```js
+tinycolor(&#x22;#f00&#x22;).<span class="apidocCodeKeywordSpan">darken</span>().toString(); // &#x22;#cc0000&#x22;
+tinycolor(&#x22;#f00&#x22;).darken(100).toString(); // &#x22;#000000&#x22;
+```
+### desaturate
+
+`desaturate: function(amount = 10) -&#x3e; TinyColor`.  Desaturate the color a given amount, from 0 to 100.  Providing 100 will
+is the same as calling `greyscale`.
+```js
+tinycolor(&#x22;#f00&#x22;).desaturate().toString(); // &#x22;#f20d0d&#x22;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.desaturate" id="apidoc.element.tinycolor2.tinycolor.prototype.desaturate">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>desaturate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">desaturate = function () {
+    return this._applyModification(desaturate, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+color2.setAlpha(.5);
+color2.toString(); // &#x22;rgba(255, 0, 0, 0.5)&#x22;
+```
+### Color Modification
+
+These methods manipulate the current color, and return it for chaining.  For instance:
+```js
+tinycolor(&#x22;red&#x22;).lighten().<span class="apidocCodeKeywordSpan">desaturate</span>().toHexString() // &#x22;#f53d3d&#x22
+;
+```
+### lighten
+
+`lighten: function(amount = 10) -&#x3e; TinyColor`.  Lighten the color a given amount, from 0 to 100.  Providing 100 will always
+ return white.
+```js
+tinycolor(&#x22;#f00&#x22;).lighten().toString(); // &#x22;#ff3333&#x22;
+tinycolor(&#x22;#f00&#x22;).lighten(100).toString(); // &#x22;#ffffff&#x22;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.getAlpha" id="apidoc.element.tinycolor2.tinycolor.prototype.getAlpha">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>getAlpha
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAlpha = function () {
+    return this._a;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+color2.getLuminance(); // 0
+```
+### getAlpha
+
+Returns the alpha value of a color, from `0-1`.
+```js
+var color1 = tinycolor(&#x22;rgba(255, 0, 0, .5)&#x22;);
+color1.<span class="apidocCodeKeywordSpan">getAlpha</span>(); // 0.5
+
+var color2 = tinycolor(&#x22;rgb(255, 0, 0)&#x22;);
+color2.getAlpha(); // 1
+
+var color3 = tinycolor(&#x22;transparent&#x22;);
+color3.getAlpha(); // 0
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.getBrightness" id="apidoc.element.tinycolor2.tinycolor.prototype.getBrightness">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>getBrightness
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getBrightness = function () {
+    //http://www.w3.org/TR/AERT#color-contrast
+    var rgb = this.toRgb();
+    return (rgb.r * 299 + rgb.g * 587 + rgb.b * 114) / 1000;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+color2.toString(); // &#x22;#000000&#x22;
+```
+### getBrightness
+
+Returns the perceived brightness of a color, from `0-255`, as defined by [Web Content Accessibility Guidelines (Version 1.0)](http
+://www.w3.org/TR/AERT#color-contrast).
+```js
+var color1 = tinycolor(&#x22;#fff&#x22;);
+color1.<span class="apidocCodeKeywordSpan">getBrightness</span>(); // 255
+
+var color2 = tinycolor(&#x22;#000&#x22;);
+color2.getBrightness(); // 0
+```
+### isLight
+
+Return a boolean indicating whether the color&#x27;s perceived brightness is light.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.getFormat" id="apidoc.element.tinycolor2.tinycolor.prototype.getFormat">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>getFormat
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getFormat = function () {
+    return this._format;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+## Methods
+
+### getFormat
+
+Returns the format used to create the tinycolor instance
+```js
+var color = tinycolor(&#x22;red&#x22;);
+color.<span class="apidocCodeKeywordSpan">getFormat</span>(); // &#x22;name&#x22;
+color = tinycolor({r:255, g:255, b:255});
+color.getFormat(); // &#x22;rgb&#x22;
+```
+
+### getOriginalInput
+
+Returns the input passed into the constructer used to create the tinycolor instance
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.getLuminance" id="apidoc.element.tinycolor2.tinycolor.prototype.getLuminance">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>getLuminance
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getLuminance = function () {
+    //http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+    var rgb = this.toRgb();
+    var RsRGB, GsRGB, BsRGB, R, G, B;
+    RsRGB = rgb.r/255;
+    GsRGB = rgb.g/255;
+    BsRGB = rgb.b/255;
+
+    if (RsRGB &#x3c;= 0.03928) {R = RsRGB / 12.92;} else {R = Math.pow(((RsRGB + 0.055) / 1.055), 2.4);}
+    if (GsRGB &#x3c;= 0.03928) {G = GsRGB / 12.92;} else {G = Math.pow(((GsRGB + 0.055) / 1.055), 2.4);}
+    if (BsRGB &#x3c;= 0.03928) {B = BsRGB / 12.92;} else {B = Math.pow(((BsRGB + 0.055) / 1.055), 2.4);}
+    return (0.2126 * R) + (0.7152 * G) + (0.0722 * B);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+color2.isDark(); // true
+```
+### getLuminance
+
+Returns the perceived luminance of a color, from `0-1` as defined by [Web Content Accessibility Guidelines (Version 2.0).](http://
+www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef)
+```js
+var color1 = tinycolor(&#x22;#fff&#x22;);
+color1.<span class="apidocCodeKeywordSpan">getLuminance</span>(); // 1
+
+var color2 = tinycolor(&#x22;#000&#x22;);
+color2.getLuminance(); // 0
+```
+### getAlpha
+
+Returns the alpha value of a color, from `0-1`.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.getOriginalInput" id="apidoc.element.tinycolor2.tinycolor.prototype.getOriginalInput">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>getOriginalInput
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getOriginalInput = function () {
+  return this._originalInput;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+### getOriginalInput
+
+Returns the input passed into the constructer used to create the tinycolor instance
+```js
+var color = tinycolor(&#x22;red&#x22;);
+color.<span class="apidocCodeKeywordSpan">getOriginalInput</span>(); // &#x22;red&#x22;
+color = tinycolor({r:255, g:255, b:255});
+color.getOriginalInput(); // &#x22;{r: 255, g: 255, b: 255}&#x22;
+```
+
+### isValid
+
+Return a boolean indicating whether the color was successfully parsed.  Note: if the color is not valid then it will act like `black
+` when being used with other methods.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.greyscale" id="apidoc.element.tinycolor2.tinycolor.prototype.greyscale">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>greyscale
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">greyscale = function () {
+    return this._applyModification(greyscale, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+tinycolor(&#x22;hsl(0, 10%, 50%)&#x22;).saturate().toString(); // &#x22;hsl(0, 20%, 50%)&#x22;
+```
+### greyscale
+
+`greyscale: function() -&#x3e; TinyColor`.  Completely desaturates a color into greyscale.  Same as calling `desaturate(100)`.
+```js
+tinycolor(&#x22;#f00&#x22;).<span class="apidocCodeKeywordSpan">greyscale</span>().toString(); // &#x22;#808080&#x22;
+```
+### spin
+
+`spin: function(amount = 0) -&#x3e; TinyColor`.  Spin the hue a given amount, from -360 to 360.  Calling with 0, 360, or -360 will
+ do nothing (since it sets the hue back to what it was before).
+```js
+tinycolor(&#x22;#f00&#x22;).spin(180).toString(); // &#x22;#00ffff&#x22;
+tinycolor(&#x22;#f00&#x22;).spin(-90).toString(); // &#x22;#7f00ff&#x22;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.isDark" id="apidoc.element.tinycolor2.tinycolor.prototype.isDark">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>isDark
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isDark = function () {
+    return this.getBrightness() &#x3c; 128;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+color2.isLight(); // false
+```
+### isDark
+
+Return a boolean indicating whether the color&#x27;s perceived brightness is dark.
+```js
+var color1 = tinycolor(&#x22;#fff&#x22;);
+color1.<span class="apidocCodeKeywordSpan">isDark</span>(); // false
+
+var color2 = tinycolor(&#x22;#000&#x22;);
+color2.isDark(); // true
+```
+### getLuminance
+
+Returns the perceived luminance of a color, from `0-1` as defined by [Web Content Accessibility Guidelines (Version 2.0).](http://
+www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.isLight" id="apidoc.element.tinycolor2.tinycolor.prototype.isLight">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>isLight
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isLight = function () {
+    return !this.isDark();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+color2.getBrightness(); // 0
+```
+### isLight
+
+Return a boolean indicating whether the color&#x27;s perceived brightness is light.
+```js
+var color1 = tinycolor(&#x22;#fff&#x22;);
+color1.<span class="apidocCodeKeywordSpan">isLight</span>(); // true
+
+var color2 = tinycolor(&#x22;#000&#x22;);
+color2.isLight(); // false
+```
+### isDark
+
+Return a boolean indicating whether the color&#x27;s perceived brightness is dark.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.isValid" id="apidoc.element.tinycolor2.tinycolor.prototype.isValid">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>isValid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isValid = function () {
+    return this._ok;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+### isValid
+
+Return a boolean indicating whether the color was successfully parsed.  Note: if the color is not valid then it will act like `black
+` when being used with other methods.
+```js
+var color1 = tinycolor(&#x22;red&#x22;);
+color1.<span class="apidocCodeKeywordSpan">isValid</span>(); // true
+color1.toHexString(); // &#x22;#ff0000&#x22;
+
+var color2 = tinycolor(&#x22;not a color&#x22;);
+color2.isValid(); // false
+color2.toString(); // &#x22;#000000&#x22;
+```
+### getBrightness
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.lighten" id="apidoc.element.tinycolor2.tinycolor.prototype.lighten">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>lighten
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lighten = function () {
+    return this._applyModification(lighten, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+color2.setAlpha(.5);
+color2.toString(); // &#x22;rgba(255, 0, 0, 0.5)&#x22;
+```
+### Color Modification
+
+These methods manipulate the current color, and return it for chaining.  For instance:
+```js
+tinycolor(&#x22;red&#x22;).<span class="apidocCodeKeywordSpan">lighten</span>().desaturate().toHexString() // &#x22;#f53d3d&#x22
+;
+```
+### lighten
+
+`lighten: function(amount = 10) -&#x3e; TinyColor`.  Lighten the color a given amount, from 0 to 100.  Providing 100 will always
+ return white.
+```js
+tinycolor(&#x22;#f00&#x22;).lighten().toString(); // &#x22;#ff3333&#x22;
+tinycolor(&#x22;#f00&#x22;).lighten(100).toString(); // &#x22;#ffffff&#x22;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.monochromatic" id="apidoc.element.tinycolor2.tinycolor.prototype.monochromatic">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>monochromatic
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">monochromatic = function () {
+    return this._applyCombination(monochromatic, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+colors.map(function(t) { return t.toHexString(); }); // [ &#x22;#ff0000&#x22;, &#x22;#ff0066&#x22;, &#x22;#ff0033&#x22;, &#x22;#
+ff0000&#x22;, &#x22;#ff3300&#x22;, &#x22;#ff6600&#x22; ]
+```
+### monochromatic
+
+`monochromatic: function(, results = 6) -&#x3e; array&#x3c;TinyColor&#x3e;`.
+```js
+var colors = tinycolor(&#x22;#f00&#x22;).<span class="apidocCodeKeywordSpan">monochromatic</span>();
+
+colors.map(function(t) { return t.toHexString(); }); // [ &#x22;#ff0000&#x22;, &#x22;#2a0000&#x22;, &#x22;#550000&#x22;, &#x22;#
+800000&#x22;, &#x22;#aa0000&#x22;, &#x22;#d40000&#x22; ]
+```
+### splitcomplement
+
+`splitcomplement: function() -&#x3e; array&#x3c;TinyColor&#x3e;`.
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.saturate" id="apidoc.element.tinycolor2.tinycolor.prototype.saturate">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>saturate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">saturate = function () {
+    return this._applyModification(saturate, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+tinycolor(&#x22;#f00&#x22;).desaturate().toString(); // &#x22;#f20d0d&#x22;
+tinycolor(&#x22;#f00&#x22;).desaturate(100).toString(); // &#x22;#808080&#x22;
+```
+### saturate
+
+`saturate: function(amount = 10) -&#x3e; TinyColor`.  Saturate the color a given amount, from 0 to 100.
+```js
+tinycolor(&#x22;hsl(0, 10%, 50%)&#x22;).<span class="apidocCodeKeywordSpan">saturate</span>().toString(); // &#x22;hsl(0, 20%, 50
+%)&#x22;
+```
+### greyscale
+
+`greyscale: function() -&#x3e; TinyColor`.  Completely desaturates a color into greyscale.  Same as calling `desaturate(100)`.
+```js
+tinycolor(&#x22;#f00&#x22;).greyscale().toString(); // &#x22;#808080&#x22;
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.setAlpha" id="apidoc.element.tinycolor2.tinycolor.prototype.setAlpha">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>setAlpha
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setAlpha = function (value) {
+    this._a = boundAlpha(value);
+    this._roundA = mathRound(100*this._a) / 100;
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+### setAlpha
+
+Sets the alpha value on a current color.  Accepted range is in between `0-1`.
+```js
+var color = tinycolor(&#x22;red&#x22;);
+color.getAlpha(); // 1
+color.<span class="apidocCodeKeywordSpan">setAlpha</span>(.5);
+color.getAlpha(); // .5
+color.toRgbString(); // &#x22;rgba(255, 0, 0, .5)&#x22;
+```
+### String Representations
+
+The following methods will return a property for the `alpha` value, which can be ignored: `toHsv`, `toHsl`, `toRgb`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.spin" id="apidoc.element.tinycolor2.tinycolor.prototype.spin">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>spin
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">spin = function () {
+    return this._applyModification(spin, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+tinycolor(&#x22;#f00&#x22;).greyscale().toString(); // &#x22;#808080&#x22;
+```
+### spin
+
+`spin: function(amount = 0) -&#x3e; TinyColor`.  Spin the hue a given amount, from -360 to 360.  Calling with 0, 360, or -360 will
+ do nothing (since it sets the hue back to what it was before).
+```js
+tinycolor(&#x22;#f00&#x22;).<span class="apidocCodeKeywordSpan">spin</span>(180).toString(); // &#x22;#00ffff&#x22;
+tinycolor(&#x22;#f00&#x22;).spin(-90).toString(); // &#x22;#7f00ff&#x22;
+tinycolor(&#x22;#f00&#x22;).spin(90).toString(); // &#x22;#80ff00&#x22;
+
+// spin(0) and spin(360) do nothing
+tinycolor(&#x22;#f00&#x22;).spin(0).toString(); // &#x22;#ff0000&#x22;
+tinycolor(&#x22;#f00&#x22;).spin(360).toString(); // &#x22;#ff0000&#x22;
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.splitcomplement" id="apidoc.element.tinycolor2.tinycolor.prototype.splitcomplement">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>splitcomplement
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">splitcomplement = function () {
+    return this._applyCombination(splitcomplement, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+colors.map(function(t) { return t.toHexString(); }); // [ &#x22;#ff0000&#x22;, &#x22;#2a0000&#x22;, &#x22;#550000&#x22;, &#x22;#
+800000&#x22;, &#x22;#aa0000&#x22;, &#x22;#d40000&#x22; ]
+```
+### splitcomplement
+
+`splitcomplement: function() -&#x3e; array&#x3c;TinyColor&#x3e;`.
+```js
+var colors = tinycolor(&#x22;#f00&#x22;).<span class="apidocCodeKeywordSpan">splitcomplement</span>();
+
+colors.map(function(t) { return t.toHexString(); }); // [ &#x22;#ff0000&#x22;, &#x22;#ccff00&#x22;, &#x22;#0066ff&#x22; ]
+```
+### triad
+
+`triad: function() -&#x3e; array&#x3c;TinyColor&#x3e;`.
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.tetrad" id="apidoc.element.tinycolor2.tinycolor.prototype.tetrad">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>tetrad
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">tetrad = function () {
+    return this._applyCombination(tetrad, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+colors.map(function(t) { return t.toHexString(); }); // [ &#x22;#ff0000&#x22;, &#x22;#00ff00&#x22;, &#x22;#0000ff&#x22; ]
+```
+### tetrad
+
+`tetrad: function() -&#x3e; array&#x3c;TinyColor&#x3e;`.
+```js
+var colors = tinycolor(&#x22;#f00&#x22;).<span class="apidocCodeKeywordSpan">tetrad</span>();
+
+colors.map(function(t) { return t.toHexString(); }); // [ &#x22;#ff0000&#x22;, &#x22;#80ff00&#x22;, &#x22;#00ffff&#x22;, &#x22;#
+7f00ff&#x22; ]
+
+```
+### complement
+
+`complement: function() -&#x3e; TinyColor`.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.toFilter" id="apidoc.element.tinycolor2.tinycolor.prototype.toFilter">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>toFilter
+        <span class="apidocSignatureSpan">(secondColor)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toFilter = function (secondColor) {
+    var hex8String = &#x27;#&#x27; + rgbaToArgbHex(this._r, this._g, this._b, this._a);
+    var secondHex8String = hex8String;
+    var gradientType = this._gradientType ? &#x22;GradientType = 1, &#x22; : &#x22;&#x22;;
+
+    if (secondColor) {
+        var s = tinycolor(secondColor);
+        secondHex8String = &#x27;#&#x27; + rgbaToArgbHex(s._r, s._g, s._b, s._a);
+    }
+
+    return &#x22;progid:DXImageTransform.Microsoft.gradient(&#x22;+gradientType+&#x22;startColorstr=&#x22;+hex8String+&#x22;,endColorstr=&#x22;+secondHex8String
++&#x22;)&#x22;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+var color = tinycolor(&#x22;red&#x22;);
+color.toName(); // &#x22;red&#x22;
+```
+### toFilter
+```
+var color = tinycolor(&#x22;red&#x22;);
+color.<span class="apidocCodeKeywordSpan">toFilter</span>(); // &#x22;progid:DXImageTransform.Microsoft.gradient(startColorstr=#
+ffff0000,endColorstr=#ffff0000)&#x22;
+```
+### toString
+
+Print to a string, depending on the input format.  You can also override this by passing one of `&#x22;rgb&#x22;, &#x22;prgb&#x22
+;, &#x22;hex6&#x22;, &#x22;hex3&#x22;, &#x22;hex8&#x22;, &#x22;name&#x22;, &#x22;hsl&#x22;, &#x22;hsv&#x22;` into the function.
+```js
+var color1 = tinycolor(&#x22;red&#x22;);
+color1.toString(); // &#x22;red&#x22;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.toHex" id="apidoc.element.tinycolor2.tinycolor.prototype.toHex">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>toHex
+        <span class="apidocSignatureSpan">(allow3Char)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toHex = function (allow3Char) {
+    return rgbToHex(this._r, this._g, this._b, allow3Char);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+color.toHslString(); // &#x22;hsl(0, 100%, 50%)&#x22;
+color.setAlpha(0.5);
+color.toHslString(); // &#x22;hsla(0, 100%, 50%, 0.5)&#x22;
+```
+### toHex
+```js
+var color = tinycolor(&#x22;red&#x22;);
+color.<span class="apidocCodeKeywordSpan">toHex</span>(); // &#x22;ff0000&#x22;
+```
+### toHexString
+```js
+var color = tinycolor(&#x22;red&#x22;);
+color.toHexString(); // &#x22;#ff0000&#x22;
+```
+### toHex8
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.toHex8" id="apidoc.element.tinycolor2.tinycolor.prototype.toHex8">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>toHex8
+        <span class="apidocSignatureSpan">(allow4Char)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toHex8 = function (allow4Char) {
+    return rgbaToHex(this._r, this._g, this._b, this._a, allow4Char);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+var color = tinycolor(&#x22;red&#x22;);
+color.toHexString(); // &#x22;#ff0000&#x22;
+```
+### toHex8
+```js
+var color = tinycolor(&#x22;red&#x22;);
+color.<span class="apidocCodeKeywordSpan">toHex8</span>(); // &#x22;ff0000ff&#x22;
+```
+### toHex8String
+```js
+var color = tinycolor(&#x22;red&#x22;);
+color.toHex8String(); // &#x22;#ff0000ff&#x22;
+```
+### toRgb
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.toHex8String" id="apidoc.element.tinycolor2.tinycolor.prototype.toHex8String">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>toHex8String
+        <span class="apidocSignatureSpan">(allow4Char)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toHex8String = function (allow4Char) {
+    return &#x27;#&#x27; + this.toHex8(allow4Char);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+var color = tinycolor(&#x22;red&#x22;);
+color.toHex8(); // &#x22;ff0000ff&#x22;
+```
+### toHex8String
+```js
+var color = tinycolor(&#x22;red&#x22;);
+color.<span class="apidocCodeKeywordSpan">toHex8String</span>(); // &#x22;#ff0000ff&#x22;
+```
+### toRgb
+```js
+var color = tinycolor(&#x22;red&#x22;);
+color.toRgb(); // { r: 255, g: 0, b: 0, a: 1 }
+```
+### toRgbString
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.toHexString" id="apidoc.element.tinycolor2.tinycolor.prototype.toHexString">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>toHexString
+        <span class="apidocSignatureSpan">(allow3Char)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toHexString = function (allow3Char) {
+    return &#x27;#&#x27; + this.toHex(allow3Char);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### isValid
+
+Return a boolean indicating whether the color was successfully parsed.  Note: if the color is not valid then it will act like `black
+` when being used with other methods.
+```js
+var color1 = tinycolor(&#x22;red&#x22;);
+color1.isValid(); // true
+color1.<span class="apidocCodeKeywordSpan">toHexString</span>(); // &#x22;#ff0000&#x22;
+
+var color2 = tinycolor(&#x22;not a color&#x22;);
+color2.isValid(); // false
+color2.toString(); // &#x22;#000000&#x22;
+```
+### getBrightness
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.toHsl" id="apidoc.element.tinycolor2.tinycolor.prototype.toHsl">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>toHsl
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toHsl = function () {
+    var hsl = rgbToHsl(this._r, this._g, this._b);
+    return { h: hsl.h * 360, s: hsl.s, l: hsl.l, a: this._a };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+color.toHsvString(); // &#x22;hsv(0, 100%, 100%)&#x22;
+color.setAlpha(0.5);
+color.toHsvString(); // &#x22;hsva(0, 100%, 100%, 0.5)&#x22;
+```
+### toHsl
+```js
+var color = tinycolor(&#x22;red&#x22;);
+color.<span class="apidocCodeKeywordSpan">toHsl</span>(); // { h: 0, s: 1, l: 0.5, a: 1 }
+```
+### toHslString
+```js
+var color = tinycolor(&#x22;red&#x22;);
+color.toHslString(); // &#x22;hsl(0, 100%, 50%)&#x22;
+color.setAlpha(0.5);
+color.toHslString(); // &#x22;hsla(0, 100%, 50%, 0.5)&#x22;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.toHslString" id="apidoc.element.tinycolor2.tinycolor.prototype.toHslString">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>toHslString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toHslString = function () {
+    var hsl = rgbToHsl(this._r, this._g, this._b);
+    var h = mathRound(hsl.h * 360), s = mathRound(hsl.s * 100), l = mathRound(hsl.l * 100);
+    return (this._a == 1) ?
+      &#x22;hsl(&#x22;  + h + &#x22;, &#x22; + s + &#x22;%, &#x22; + l + &#x22;%)&#x22; :
+      &#x22;hsla(&#x22; + h + &#x22;, &#x22; + s + &#x22;%, &#x22; + l + &#x22;%, &#x22;+ this._roundA + &#x22;)&#x22;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+var color = tinycolor(&#x22;red&#x22;);
+color.toHsl(); // { h: 0, s: 1, l: 0.5, a: 1 }
+```
+### toHslString
+```js
+var color = tinycolor(&#x22;red&#x22;);
+color.<span class="apidocCodeKeywordSpan">toHslString</span>(); // &#x22;hsl(0, 100%, 50%)&#x22;
+color.setAlpha(0.5);
+color.toHslString(); // &#x22;hsla(0, 100%, 50%, 0.5)&#x22;
+```
+### toHex
+```js
+var color = tinycolor(&#x22;red&#x22;);
+color.toHex(); // &#x22;ff0000&#x22;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.toHsv" id="apidoc.element.tinycolor2.tinycolor.prototype.toHsv">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>toHsv
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toHsv = function () {
+    var hsv = rgbToHsv(this._r, this._g, this._b);
+    return { h: hsv.h * 360, s: hsv.s, v: hsv.v, a: this._a };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### String Representations
+
+The following methods will return a property for the `alpha` value, which can be ignored: `toHsv`, `toHsl`, `toRgb`
+
+### toHsv
+```js
+var color = tinycolor(&#x22;red&#x22;);
+color.<span class="apidocCodeKeywordSpan">toHsv</span>(); // { h: 0, s: 1, v: 1, a: 1 }
+```
+### toHsvString
+```js
+var color = tinycolor(&#x22;red&#x22;);
+color.toHsvString(); // &#x22;hsv(0, 100%, 100%)&#x22;
+color.setAlpha(0.5);
+color.toHsvString(); // &#x22;hsva(0, 100%, 100%, 0.5)&#x22;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.toHsvString" id="apidoc.element.tinycolor2.tinycolor.prototype.toHsvString">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>toHsvString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toHsvString = function () {
+    var hsv = rgbToHsv(this._r, this._g, this._b);
+    var h = mathRound(hsv.h * 360), s = mathRound(hsv.s * 100), v = mathRound(hsv.v * 100);
+    return (this._a == 1) ?
+      &#x22;hsv(&#x22;  + h + &#x22;, &#x22; + s + &#x22;%, &#x22; + v + &#x22;%)&#x22; :
+      &#x22;hsva(&#x22; + h + &#x22;, &#x22; + s + &#x22;%, &#x22; + v + &#x22;%, &#x22;+ this._roundA + &#x22;)&#x22;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+var color = tinycolor(&#x22;red&#x22;);
+color.toHsv(); // { h: 0, s: 1, v: 1, a: 1 }
+```
+### toHsvString
+```js
+var color = tinycolor(&#x22;red&#x22;);
+color.<span class="apidocCodeKeywordSpan">toHsvString</span>(); // &#x22;hsv(0, 100%, 100%)&#x22;
+color.setAlpha(0.5);
+color.toHsvString(); // &#x22;hsva(0, 100%, 100%, 0.5)&#x22;
+```
+### toHsl
+```js
+var color = tinycolor(&#x22;red&#x22;);
+color.toHsl(); // { h: 0, s: 1, l: 0.5, a: 1 }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.toName" id="apidoc.element.tinycolor2.tinycolor.prototype.toName">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>toName
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toName = function () {
+    if (this._a === 0) {
+        return &#x22;transparent&#x22;;
+    }
+
+    if (this._a &#x3c; 1) {
+        return false;
+    }
+
+    return hexNames[rgbToHex(this._r, this._g, this._b, true)] || false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+color.toPercentageRgbString(); // &#x22;rgb(100%, 0%, 0%)&#x22;
+color.setAlpha(0.5);
+color.toPercentageRgbString(); // &#x22;rgba(100%, 0%, 0%, 0.5)&#x22;
+```
+### toName
+```js
+var color = tinycolor(&#x22;red&#x22;);
+color.<span class="apidocCodeKeywordSpan">toName</span>(); // &#x22;red&#x22;
+```
+### toFilter
+```
+var color = tinycolor(&#x22;red&#x22;);
+color.toFilter(); // &#x22;progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffff0000,endColorstr=#ffff0000)&#x22;
+```
+### toString
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.toPercentageRgb" id="apidoc.element.tinycolor2.tinycolor.prototype.toPercentageRgb">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>toPercentageRgb
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toPercentageRgb = function () {
+    return { r: mathRound(bound01(this._r, 255) * 100) + &#x22;%&#x22;, g: mathRound(bound01(this._g, 255) * 100) + &#x22;%&#x22;, b: mathRound(bound01
+(this._b, 255) * 100) + &#x22;%&#x22;, a: this._a };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+color.toRgbString(); // &#x22;rgb(255, 0, 0)&#x22;
+color.setAlpha(0.5);
+color.toRgbString(); // &#x22;rgba(255, 0, 0, 0.5)&#x22;
+```
+### toPercentageRgb
+```js
+var color = tinycolor(&#x22;red&#x22;);
+color.<span class="apidocCodeKeywordSpan">toPercentageRgb</span>() // { r: &#x22;100%&#x22;, g: &#x22;0%&#x22;, b: &#x22;0%&#x22
+;, a: 1 }
+```
+### toPercentageRgbString
+```js
+var color = tinycolor(&#x22;red&#x22;);
+color.toPercentageRgbString(); // &#x22;rgb(100%, 0%, 0%)&#x22;
+color.setAlpha(0.5);
+color.toPercentageRgbString(); // &#x22;rgba(100%, 0%, 0%, 0.5)&#x22;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.toPercentageRgbString" id="apidoc.element.tinycolor2.tinycolor.prototype.toPercentageRgbString">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>toPercentageRgbString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toPercentageRgbString = function () {
+    return (this._a == 1) ?
+      &#x22;rgb(&#x22;  + mathRound(bound01(this._r, 255) * 100) + &#x22;%, &#x22; + mathRound(bound01(this._g, 255) * 100) + &#x22;%, &#x22; + mathRound(bound01
+(this._b, 255) * 100) + &#x22;%)&#x22; :
+      &#x22;rgba(&#x22; + mathRound(bound01(this._r, 255) * 100) + &#x22;%, &#x22; + mathRound(bound01(this._g, 255) * 100) + &#x22;%, &#x22; + mathRound(bound01
+(this._b, 255) * 100) + &#x22;%, &#x22; + this._roundA + &#x22;)&#x22;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+var color = tinycolor(&#x22;red&#x22;);
+color.toPercentageRgb() // { r: &#x22;100%&#x22;, g: &#x22;0%&#x22;, b: &#x22;0%&#x22;, a: 1 }
+```
+### toPercentageRgbString
+```js
+var color = tinycolor(&#x22;red&#x22;);
+color.<span class="apidocCodeKeywordSpan">toPercentageRgbString</span>(); // &#x22;rgb(100%, 0%, 0%)&#x22;
+color.setAlpha(0.5);
+color.toPercentageRgbString(); // &#x22;rgba(100%, 0%, 0%, 0.5)&#x22;
+```
+### toName
+```js
+var color = tinycolor(&#x22;red&#x22;);
+color.toName(); // &#x22;red&#x22;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.toRgb" id="apidoc.element.tinycolor2.tinycolor.prototype.toRgb">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>toRgb
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toRgb = function () {
+    return { r: mathRound(this._r), g: mathRound(this._g), b: mathRound(this._b), a: this._a };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+var color = tinycolor(&#x22;red&#x22;);
+color.toHex8String(); // &#x22;#ff0000ff&#x22;
+```
+### toRgb
+```js
+var color = tinycolor(&#x22;red&#x22;);
+color.<span class="apidocCodeKeywordSpan">toRgb</span>(); // { r: 255, g: 0, b: 0, a: 1 }
+```
+### toRgbString
+```js
+var color = tinycolor(&#x22;red&#x22;);
+color.toRgbString(); // &#x22;rgb(255, 0, 0)&#x22;
+color.setAlpha(0.5);
+color.toRgbString(); // &#x22;rgba(255, 0, 0, 0.5)&#x22;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.toRgbString" id="apidoc.element.tinycolor2.tinycolor.prototype.toRgbString">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>toRgbString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toRgbString = function () {
+    return (this._a == 1) ?
+      &#x22;rgb(&#x22;  + mathRound(this._r) + &#x22;, &#x22; + mathRound(this._g) + &#x22;, &#x22; + mathRound(this._b) + &#x22;)&#x22; :
+      &#x22;rgba(&#x22; + mathRound(this._r) + &#x22;, &#x22; + mathRound(this._g) + &#x22;, &#x22; + mathRound(this._b) + &#x22;, &#x22; + this._roundA + &#x22;)&#x22;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Sets the alpha value on a current color.  Accepted range is in between `0-1`.
+```js
+var color = tinycolor(&#x22;red&#x22;);
+color.getAlpha(); // 1
+color.setAlpha(.5);
+color.getAlpha(); // .5
+color.<span class="apidocCodeKeywordSpan">toRgbString</span>(); // &#x22;rgba(255, 0, 0, .5)&#x22;
+```
+### String Representations
+
+The following methods will return a property for the `alpha` value, which can be ignored: `toHsv`, `toHsl`, `toRgb`
+
+### toHsv
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.toString" id="apidoc.element.tinycolor2.tinycolor.prototype.toString">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>toString
+        <span class="apidocSignatureSpan">(format)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function (format) {
+    var formatSet = !!format;
+    format = format || this._format;
+
+    var formattedString = false;
+    var hasAlpha = this._a &#x3c; 1 &#x26;&#x26; this._a &#x3e;= 0;
+    var needsAlphaFormat = !formatSet &#x26;&#x26; hasAlpha &#x26;&#x26; (format === &#x22;hex&#x22; || format === &#x22;hex6&#x22; || format === &#x22;hex3&#x22; || format === &#x22;
+hex4&#x22; || format === &#x22;hex8&#x22; || format === &#x22;name&#x22;);
+
+    if (needsAlphaFormat) {
+        // Special case for &#x22;transparent&#x22;, all other non-alpha formats
+        // will return rgba when there is transparency.
+        if (format === &#x22;name&#x22; &#x26;&#x26; this._a === 0) {
+            return this.toName();
+        }
+        return this.toRgbString();
+    }
+    if (format === &#x22;rgb&#x22;) {
+        formattedString = this.toRgbString();
+    }
+    if (format === &#x22;prgb&#x22;) {
+        formattedString = this.toPercentageRgbString();
+    }
+    if (format === &#x22;hex&#x22; || format === &#x22;hex6&#x22;) {
+        formattedString = this.toHexString();
+    }
+    if (format === &#x22;hex3&#x22;) {
+        formattedString = this.toHexString(true);
+    }
+    if (format === &#x22;hex4&#x22;) {
+        formattedString = this.toHex8String(true);
+    }
+    if (format === &#x22;hex8&#x22;) {
+        formattedString = this.toHex8String();
+    }
+    if (format === &#x22;name&#x22;) {
+        formattedString = this.toName();
+    }
+    if (format === &#x22;hsl&#x22;) {
+        formattedString = this.toHslString();
+    }
+    if (format === &#x22;hsv&#x22;) {
+        formattedString = this.toHsvString();
+    }
+
+    return formattedString || this.toHexString();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+var color1 = tinycolor(&#x22;red&#x22;);
+color1.isValid(); // true
+color1.toHexString(); // &#x22;#ff0000&#x22;
+
+var color2 = tinycolor(&#x22;not a color&#x22;);
+color2.isValid(); // false
+color2.<span class="apidocCodeKeywordSpan">toString</span>(); // &#x22;#000000&#x22;
+```
+### getBrightness
+
+Returns the perceived brightness of a color, from `0-255`, as defined by [Web Content Accessibility Guidelines (Version 1.0)](http
+://www.w3.org/TR/AERT#color-contrast).
+```js
+var color1 = tinycolor(&#x22;#fff&#x22;);
+color1.getBrightness(); // 255
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.tinycolor2.tinycolor.prototype.triad" id="apidoc.element.tinycolor2.tinycolor.prototype.triad">
+        function <span class="apidocSignatureSpan">tinycolor2.tinycolor.prototype.</span>triad
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">triad = function () {
+    return this._applyCombination(triad, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+colors.map(function(t) { return t.toHexString(); }); // [ &#x22;#ff0000&#x22;, &#x22;#ccff00&#x22;, &#x22;#0066ff&#x22; ]
+```
+### triad
+
+`triad: function() -&#x3e; array&#x3c;TinyColor&#x3e;`.
+```js
+var colors = tinycolor(&#x22;#f00&#x22;).<span class="apidocCodeKeywordSpan">triad</span>();
+
+colors.map(function(t) { return t.toHexString(); }); // [ &#x22;#ff0000&#x22;, &#x22;#00ff00&#x22;, &#x22;#0000ff&#x22; ]
+```
+### tetrad
+
+`tetrad: function() -&#x3e; array&#x3c;TinyColor&#x3e;`.
+```js
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
